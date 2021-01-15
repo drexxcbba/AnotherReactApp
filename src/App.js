@@ -1,12 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
+import React, { Fragment } from 'react';
 
 function App() {
   return (
-    <div className="App">
+    <Fragment>
      <Header />
-    </div>
+     <Footer />
+    </Fragment>
   );
 }
 

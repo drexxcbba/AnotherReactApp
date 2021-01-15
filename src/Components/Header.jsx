@@ -3,7 +3,7 @@ import React from 'react';
 function Header(){
 
     return (
-        <h1>Desde el header</h1>
+        <h1 className="encabezado">Tienda virtual</h1>
     )
 }
 
