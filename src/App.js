@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Footer from './Components/Footer';
 import React, { Fragment, useState } from 'react';
 import Product from './Components/Product';
+import Car from './Components/Car';
 
 function App() {
 
@@ -14,6 +15,8 @@ function App() {
     { id:4, nombre: 'Camisa 4', precio: 20 },
   ]);
 
+  const [car, setCar] = useState([]);
+
   return (
     <Fragment>
      <Header titulo="Tienda virtual"/>
@@ -21,9 +24,13 @@ function App() {
      {products.map( item => (
        <Product 
        key = {item.id} 
-       item = {item}/>
+       item = {item}
+       products = {products}
+       car = {car}
+       setCar = {setCar} />
      ))}
-     <Footer fecha={date}/>
+     <Footer fecha = {date}/>
+     <Car car = {car}/>
     </Fragment>
   );
 }
